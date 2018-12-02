@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 #include <fstream>
+
+#define ABCD "abcdefghijklmnopqrstuvwxyz"
 using namespace std;
 
 int main()
@@ -22,8 +24,7 @@ int main()
 
     infile.close();
 
-    string alphabet = "abcdefghijklmnopqrstuvwxyz";
-    int count[alphabet.size()];
+    int count[ABCD.size()];
     int i2 = 0, i3 = 0;
     bool b2, b3;
     char curr;
@@ -42,7 +43,7 @@ int main()
 	    //for each character in alphabet
 	    for (int o = 0; o < 26; o++)
 	    {
-		if(code[j] == alphabet[o])
+		if(code[j] == ABCD[o])
 		{
 		    count[o]++;
 		    break;
